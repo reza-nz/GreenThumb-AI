@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        
+        /* Aufgabe 3: Farbmarke Definition */
         :root {
-            --brand-color: #2e7d32; 
+            --brand-color: #2e7d32; /* Das ist deine Farbmarke */
             --primary: var(--brand-color);
             --primary-hover: #1b5e20;
             --contrast: #fff;
@@ -30,7 +30,7 @@
             border-radius: 0 0 20px 20px;
         }
 
-        
+        /* Wortbildmarke Styling für Header */
         .brand-logo {
             font-weight: 800;
             font-size: 1.5rem;
@@ -41,28 +41,30 @@
             gap: 10px;
         }
 
-        
+        /* Styling für die Marken-Boxen (Aufgabe 3) */
         .marken-box {
-            border: 1px solid #ccc;
+            border: 1px solid #ccc; /* Rahmen für den "Styleguide"-Look */
             padding: 20px;
             text-align: center;
             border-radius: 10px;
             height: 100%;
+            background-color: var(--card-background-color);
         }
         
         .farb-sample {
             width: 100px;
             height: 100px;
             background-color: var(--brand-color);
-            border-radius: 50%;
+            border-radius: 50%; /* Macht den Kreis */
             margin: 0 auto 10px auto;
-            border: 2px solid white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border: 4px solid #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
         }
 
         .bildmarke-icon {
             font-size: 4rem;
             color: var(--brand-color);
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -99,7 +101,7 @@
             <div class="grid">
                 
                 <div class="marken-box">
-                    <h3 class="brand-logo" style="justify-content: center;">
+                    <h3 class="brand-logo" style="justify-content: center; margin-bottom: 1rem;">
                         <i class="fa-solid fa-leaf"></i> GreenThumb AI
                     </h3>
                     <p><strong>Wortbildmarke</strong><br>Kombination aus Name und Icon.</p>
@@ -199,12 +201,12 @@
     </footer>
 
     <script>
-        // Wählt alle Elemente mit der Klasse "dummy-link" oder href="#" aus
-        const links = document.querySelectorAll('a[href="#"], .dummy-link');
+        // Dieses Skript sucht alle Links (a-Tags) auf der Seite
+        const links = document.querySelectorAll('a');
         
         links.forEach(link => {
             link.addEventListener('click', function(event) {
-                event.preventDefault(); // Verhindert das Neuladen/Springen
+                event.preventDefault(); // Verhindert das Standardverhalten (Neuladen/Springen/404)
                 console.log("Klick abgefangen - Link ist deaktiviert.");
             });
         });
