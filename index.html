@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Individuelles Branding - Aufgabe 3 (Farbwahl) */
+        
         :root {
-            --primary: #2e7d32; /* Ein starkes, kontrastreiches Waldgrün (WCAG konform auf Weiß) */
+            --brand-color: #2e7d32; 
+            --primary: var(--brand-color);
             --primary-hover: #1b5e20;
             --contrast: #fff;
         }
@@ -29,23 +30,39 @@
             border-radius: 0 0 20px 20px;
         }
 
+        
         .brand-logo {
             font-weight: 800;
             font-size: 1.5rem;
             color: var(--primary);
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Barrierefreiheit Hilfsklasse */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            padding: 0;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
+        
+        .marken-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            height: 100%;
+        }
+        
+        .farb-sample {
+            width: 100px;
+            height: 100px;
+            background-color: var(--brand-color);
+            border-radius: 50%;
+            margin: 0 auto 10px auto;
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .bildmarke-icon {
+            font-size: 4rem;
+            color: var(--brand-color);
         }
     </style>
 </head>
@@ -54,15 +71,15 @@
     <nav class="container-fluid">
         <ul>
             <li>
-                <a href="./" class="brand-logo" aria-label="Zur Startseite">
+                <a href="#" class="brand-logo dummy-link">
                     <i class="fa-solid fa-leaf"></i> GreenThumb AI
                 </a>
             </li>
         </ul>
         <ul>
-            <li><a href="#features">Funktionen</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="shop.html" role="button">Shop</a></li>
+            <li><a href="#" class="dummy-link">Funktionen</a></li>
+            <li><a href="#" class="dummy-link">Über uns</a></li>
+            <li><a href="#" role="button" class="dummy-link">Shop</a></li>
         </ul>
     </nav>
 
@@ -71,25 +88,53 @@
             <h1 style="color:white;">Deine Pflanzen sprechen mit dir.</h1>
             <p>Der erste KI-gestützte Sensor, der genau weiß, was dein grüner Freund braucht.</p>
             <br>
-            <a href="shop.html" role="button" class="contrast">Jetzt vorbestellen</a>
+            <a href="#" role="button" class="contrast dummy-link">Jetzt vorbestellen</a>
         </div>
     </header>
 
     <main class="container">
 
+        <section id="branding">
+            <h2>Unsere Markenwelt (Aufgabe 3)</h2>
+            <div class="grid">
+                
+                <div class="marken-box">
+                    <h3 class="brand-logo" style="justify-content: center;">
+                        <i class="fa-solid fa-leaf"></i> GreenThumb AI
+                    </h3>
+                    <p><strong>Wortbildmarke</strong><br>Kombination aus Name und Icon.</p>
+                </div>
+
+                <div class="marken-box">
+                    <div class="bildmarke-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <p><strong>Bildmarke</strong><br>Unser stilisiertes Blatt-Symbol.</p>
+                </div>
+
+                <div class="marken-box">
+                    <div class="farb-sample"></div>
+                    <p><strong>Farbmarke</strong><br>GreenThumb Forest Green<br>Hex: #2e7d32</p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
         <section id="features">
             <h2>Warum GreenThumb?</h2>
             <div class="grid">
                 <article>
-                    <header><i class="fa-solid fa-droplet" style="color:var(--primary);"></i> Wasser-Alarm</header>
+                    <header><i class="fa-solid fa-droplet" style="color:var(--brand-color);"></i> Wasser-Alarm</header>
                     Erhalte eine Benachrichtigung auf dein Smartphone, bevor die Erde austrocknet.
                 </article>
                 <article>
-                    <header><i class="fa-solid fa-sun" style="color:var(--primary);"></i> Licht-Analyse</header>
+                    <header><i class="fa-solid fa-sun" style="color:var(--brand-color);"></i> Licht-Analyse</header>
                     Steht deine Monstera zu dunkel? Unsere KI sagt dir den perfekten Standort.
                 </article>
                 <article>
-                    <header><i class="fa-solid fa-wifi" style="color:var(--primary);"></i> WiFi Connected</header>
+                    <header><i class="fa-solid fa-wifi" style="color:var(--brand-color);"></i> WiFi Connected</header>
                     Verbinde beliebig viele Sensoren mit der GreenThumb Home Base.
                 </article>
             </div>
@@ -98,34 +143,22 @@
         <hr>
 
         <section id="media-demo">
-            <h2>Erlebe die Technik</h2>
-            <p>Wir verbinden Natur mit High-Tech. Hier ein Einblick in unsere Fertigung.</p>
-
-            <figure>
-                <video controls width="100%" poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg">
-                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-                    Dein Browser unterstützt das Video-Tag nicht.
-                </video>
-                <figcaption>Video: Einblick in die Sensor-Technik (Demo CC-BY Blender Foundation)</figcaption>
-            </figure>
-
-            <h3>Der Sound der Ruhe</h3>
-            <p>Unsere App kommt mit integrierten Naturklängen für deine Entspannung.</p>
+            <h2>Der Sound der Natur</h2>
+            <p>Unsere App warnt dich nicht nur, sie entspannt dich auch.</p>
             <figure>
                 <audio controls src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav"></audio>
-                <figcaption>Audio-Beispiel: "Forest Rain" (Demo)</figcaption>
+                <figcaption>Audio-Beispiel: Benachrichtigungston "Forest"</figcaption>
             </figure>
         </section>
 
         <hr>
 
-        <section id="brand">
+        <section id="brand-story">
             <div class="grid">
                 <div>
                     <h2>Über FocusLabs</h2>
                     <p>Wir sind ein Start-Up aus Wien mit einer Mission: Keine toten Zimmerpflanzen mehr.</p>
-                    <p>Unsere Marke steht für Nachhaltigkeit und Smart Living.</p>
-                    <a href="about.html">Mehr über unsere Story lesen &rarr;</a>
+                    <a href="#" class="dummy-link">Mehr über unsere Story lesen &rarr;</a>
                 </div>
                 <div>
                     <img src="https://images.unsplash.com/photo-1530968464165-7a1861cbaf9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
@@ -148,18 +181,34 @@
             <div>
                 <h5>Rechtliches</h5>
                 <ul>
-                    <li><a href="impressum.html">Impressum</a></li> <li><a href="datenschutz.html">Datenschutz</a></li> <li><a href="lizenz.html">Lizenz & AGB</a></li> <li><a href="barrierefreiheit.html">Barrierefreiheitserklärung</a></li> </ul>
+                    <li><a href="#" class="dummy-link">Impressum</a></li>
+                    <li><a href="#" class="dummy-link">Datenschutz</a></li>
+                    <li><a href="#" class="dummy-link">Lizenz & AGB</a></li>
+                    <li><a href="#" class="dummy-link">Barrierefreiheit</a></li>
+                </ul>
             </div>
             <div>
                 <h5>Social</h5>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="dummy-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="dummy-link"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
         <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem;">
-            &copy; 2024 FocusLabs GmbH. Alle Medien wurden zu Bildungszwecken verwendet.
+            &copy; 2024 FocusLabs GmbH. Mockup.
         </p>
     </footer>
+
+    <script>
+        // Wählt alle Elemente mit der Klasse "dummy-link" oder href="#" aus
+        const links = document.querySelectorAll('a[href="#"], .dummy-link');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Verhindert das Neuladen/Springen
+                console.log("Klick abgefangen - Link ist deaktiviert.");
+            });
+        });
+    </script>
 
 </body>
 </html>
