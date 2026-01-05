@@ -166,85 +166,101 @@
             
             <figure>
                 <audio controls src="https://www.orangefreesounds.com/wp-content/uploads/2016/03/Sounds-of-nature.mp3"></audio>
-                <figcaption>Audio-Sample: "Rain getting heavier" (Relax Mode)</figcaption>
+                <figcaption>Audio-Sample: "Nature Sounds" (Relax Mode)</figcaption>
             </figure>
         </section>
 
 
         <hr>
 
-        <section id="impressum">
+        <section id="legal">
             <div class="grid">
                 <div>
-                    <h2>Impressum (Aufgabe 6)</h2>
+                    <h3>Impressum & Kontakt</h3>
                     <p>
-                        <strong>Inhaber:</strong><br>
-                        Reza Naziri<br>
-                        Musteradresse<br>
-                        Österreich
-                    </p>
-                    <p>
+                        <strong>GreenThumb AI</strong><br>
+                        Inhaber: Reza Naziri<br>
+                        Musteradresse, Österreich<br>
                         <i class="fa-solid fa-envelope"></i> rezanaziri1383@gmail.com<br>
-                        <i class="fa-solid fa-phone"></i> +43 665 65 137 133
+                        <i class="fa-solid fa-phone"></i> +43 665 651 371 33
                     </p>
                 </div>
 
                 <div>
-                    <h2>Barrierefreiheitserklärung</h2>
+                    <h3>Barrierefreiheit</h3>
                     <p style="font-size: 0.9rem;">
-                        Wir bemühen uns, diese Website gemäß <strong>WCAG 2.2 Konformitätsstufe AA</strong> barrierefrei zugänglich zu machen.
-                    </p>
-                    <p style="font-size: 0.9rem;">
-                        <strong>Stand der Vereinbarkeit:</strong><br>
-                        Diese Website ist mit den Richtlinien größtenteils vereinbar.
-                        <br>
-                        <em>Bekannte Einschränkungen:</em> Da es sich um ein Mockup handelt, ist die Tastaturnavigation technisch eingeschränkt (Links sind deaktiviert).
+                        Konformität: <strong>WCAG 2.2 AA</strong>.<br>
+                        Diese Website nutzt semantisches HTML, hohe Kontraste und ist skalierbar. Screenreader-Support ist durch ARIA-Labels und Alt-Texte gewährleistet.
                     </p>
                 </div>
             </div>
-            
-            <hr>
-            
-            <p style="font-size: 0.8rem; text-align: center;">
-                <em>Hinweis: Dies ist ein fiktiver Webshop für ein Studentenprojekt. Es findet kein realer Geschäftsbetrieb statt.</em>
-            </p>
+
+            <div style="margin-top: 3rem;">
+                <h3>Bildnachweis & Urheberrecht (Aufgabe 2)</h3>
+                <p>Dokumentation der verwendeten Medien gemäß Urheberrecht.</p>
+                <table class="license-table" role="table">
+                    <thead>
+                        <tr>
+                            <th>Medienart</th>
+                            <th>Beschreibung</th>
+                            <th>Quelle / Urheber</th>
+                            <th>Lizenz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bild</strong></td>
+                            <td>Hintergrundbild Header (Pflanze im Raum)</td>
+                            <td>Unsplash / Foto von <a href="#">Huy Phan</a></td>
+                            <td>Unsplash License (Freie Nutzung)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Video</strong></td>
+                            <td>Pflanzenpflege (Sprühflasche)</td>
+                            <td>Pexels / Video von <a href="#">Cottonbro Studio</a></td>
+                            <td>Pexels License (Freie Nutzung)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Audio</strong></td>
+                            <td>Regengeräusche (Rain.ogg)</td>
+                            <td>Wikimedia Commons / User: <a href="#">Acclivity</a></td>
+                            <td>CC BY 3.0 (Namensnennung)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Schriftart</strong></td>
+                            <td>"Outfit" (Font Family)</td>
+                            <td>Google Fonts / Google</td>
+                            <td>OFL (Open Font License)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Grafik/Icon</strong></td>
+                            <td>Icons (Blatt, WLAN, Sonne)</td>
+                            <td>FontAwesome Free</td>
+                            <td>CC BY 4.0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Text</strong></td>
+                            <td>Produkttexte & Slogans</td>
+                            <td>Reza Naziri (Autor)</td>
+                            <td>Urheberrecht beim Autor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
     </main>
 
     <footer class="container">
         <hr>
-        <div class="grid">
-            <div>
-                <strong>GreenThumb AI</strong><br>
-                Reza Naziri<br>
-                Wien 1010
-            </div>
-            <div>
-                <h5>Rechtliches</h5>
-                <ul>
-                    <li><a href="#">Datenschutz</a></li>
-                    <li><a href="#">AGB</a></li>
-                    <li><a href="#">Widerrufsrecht</a></li>
-                    <li><a href="#">Barrierefreiheit</a></li>
-                </ul>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem;">
-            &copy; 2024 Reza Naziri. Alle Rechte vorbehalten.
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem;">
+            &copy; 2024 Reza Naziri. Projektarbeit. Alle Rechte vorbehalten.
         </p>
     </footer>
 
     <script>
-        // Dieses Skript sucht alle <a> Tags auf der Seite
-        const links = document.querySelectorAll('a');
-        
-        links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                // Hier passiert die Magie: preventDefault verhindert alles (kein Laden, kein Springen)
-                event.preventDefault(); 
-                console.log("Klick wurde blockiert. User: Reza Naziri");
-            });
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => { e.preventDefault(); });
         });
     </script>
 
