@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GreenThumb AI - Der smarte Pflanzensensor für dein Zuhause.">
+    <title>GreenThumb AI | Smart Gardening</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Individuelles Branding - Aufgabe 3 (Farbwahl) */
+        :root {
+            --primary: #2e7d32; /* Ein starkes, kontrastreiches Waldgrün (WCAG konform auf Weiß) */
+            --primary-hover: #1b5e20;
+            --contrast: #fff;
+        }
+
+        /* Hero Section Styling */
+        header.hero {
+            padding: 3rem 0;
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .brand-logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Barrierefreiheit Hilfsklasse */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container-fluid">
+        <ul>
+            <li>
+                <a href="./" class="brand-logo" aria-label="Zur Startseite">
+                    <i class="fa-solid fa-leaf"></i> GreenThumb AI
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="#features">Funktionen</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="shop.html" role="button">Shop</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 style="color:white;">Deine Pflanzen sprechen mit dir.</h1>
+            <p>Der erste KI-gestützte Sensor, der genau weiß, was dein grüner Freund braucht.</p>
+            <br>
+            <a href="shop.html" role="button" class="contrast">Jetzt vorbestellen</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="features">
+            <h2>Warum GreenThumb?</h2>
+            <div class="grid">
+                <article>
+                    <header><i class="fa-solid fa-droplet" style="color:var(--primary);"></i> Wasser-Alarm</header>
+                    Erhalte eine Benachrichtigung auf dein Smartphone, bevor die Erde austrocknet.
+                </article>
+                <article>
+                    <header><i class="fa-solid fa-sun" style="color:var(--primary);"></i> Licht-Analyse</header>
+                    Steht deine Monstera zu dunkel? Unsere KI sagt dir den perfekten Standort.
+                </article>
+                <article>
+                    <header><i class="fa-solid fa-wifi" style="color:var(--primary);"></i> WiFi Connected</header>
+                    Verbinde beliebig viele Sensoren mit der GreenThumb Home Base.
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="media-demo">
+            <h2>Erlebe die Technik</h2>
+            <p>Wir verbinden Natur mit High-Tech. Hier ein Einblick in unsere Fertigung.</p>
+
+            <figure>
+                <video controls width="100%" poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Dein Browser unterstützt das Video-Tag nicht.
+                </video>
+                <figcaption>Video: Einblick in die Sensor-Technik (Demo CC-BY Blender Foundation)</figcaption>
+            </figure>
+
+            <h3>Der Sound der Ruhe</h3>
+            <p>Unsere App kommt mit integrierten Naturklängen für deine Entspannung.</p>
+            <figure>
+                <audio controls src="https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav"></audio>
+                <figcaption>Audio-Beispiel: "Forest Rain" (Demo)</figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <section id="brand">
+            <div class="grid">
+                <div>
+                    <h2>Über FocusLabs</h2>
+                    <p>Wir sind ein Start-Up aus Wien mit einer Mission: Keine toten Zimmerpflanzen mehr.</p>
+                    <p>Unsere Marke steht für Nachhaltigkeit und Smart Living.</p>
+                    <a href="about.html">Mehr über unsere Story lesen &rarr;</a>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1530968464165-7a1861cbaf9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Ein grünes Blatt im Detail, das Technologie und Natur symbolisiert">
+                    <small><i>Foto: Unsplash (CC0)</i></small>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container">
+        <hr>
+        <div class="grid">
+            <div>
+                <strong>GreenThumb AI</strong><br>
+                Ein Produkt der FocusLabs GmbH<br>
+                Musterstraße 1, 1010 Wien
+            </div>
+            <div>
+                <h5>Rechtliches</h5>
+                <ul>
+                    <li><a href="impressum.html">Impressum</a></li> <li><a href="datenschutz.html">Datenschutz</a></li> <li><a href="lizenz.html">Lizenz & AGB</a></li> <li><a href="barrierefreiheit.html">Barrierefreiheitserklärung</a></li> </ul>
+            </div>
+            <div>
+                <h5>Social</h5>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.8rem;">
+            &copy; 2024 FocusLabs GmbH. Alle Medien wurden zu Bildungszwecken verwendet.
+        </p>
+    </footer>
+
+</body>
+</html>
