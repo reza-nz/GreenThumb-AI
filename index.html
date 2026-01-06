@@ -91,8 +91,8 @@
             </li>
         </ul>
         <ul>
-            <li><a href="#">Funktionen</a></li>
-            <li><a href="#">Über uns</a></li>
+            <li><a href="#features">Funktionen</a></li>
+            <li><a href="#about">Über uns</a></li>
             <li><a href="#" role="button">Shop</a></li>
         </ul>
     </nav>
@@ -102,7 +102,7 @@
             <h1 style="color:white;">Deine Pflanzen sprechen mit dir.</h1>
             <p>Der erste KI-gestützte Sensor, der genau weiß, was dein grüner Freund braucht.</p>
             <br>
-            <a href="#" role="button" class="contrast">Jetzt vorbestellen</a>
+            <a href="#features" role="button" class="contrast">Jetzt vorbestellen</a>
         </div>
     </header>
 
@@ -218,7 +218,6 @@
 
         <hr>
         
-
         <section id="lizenz">
             <h2>Lizenz & Nutzungsbedingungen </h2>
             <p>Durch den Erwerb und die Nutzung von GreenThumb AI stimmen Sie folgenden Bedingungen zu:</p>
@@ -321,6 +320,7 @@
 
         </section>
         <hr>
+        
         <section id="legal">
             <div class="grid">
                 <div>
@@ -401,14 +401,30 @@
 
     <footer class="container">
         <hr>
+        <div style="text-align: center; margin-bottom: 1rem;">
+            <a href="#legal" style="margin: 0 10px;">Impressum</a>
+            <a href="#datenschutz" style="margin: 0 10px;">Datenschutz</a>
+            <a href="#lizenz" style="margin: 0 10px;">Lizenz</a>
+        </div>
         <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem;">
             &copy; 2026 Reza Naziri. Projektarbeit. Alle Rechte vorbehalten.
         </p>
     </footer>
 
     <script>
+        
         document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', e => { e.preventDefault(); });
+            link.addEventListener('click', function(e) {
+                // Holen wir uns das Ziel des Links (z.B. "#legal")
+                const target = this.getAttribute('href');
+
+                
+                if (target === '#') {
+                    e.preventDefault();
+                    console.log("Leerer Link blockiert.");
+                } 
+                
+            });
         });
     </script>
 
