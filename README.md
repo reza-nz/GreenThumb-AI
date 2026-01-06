@@ -2,7 +2,7 @@
 
 **GreenThumb AI** ist ein Webshop-Mockup für einen fiktiven IoT-Pflanzensensor, entwickelt als Semesterprojekt. Das Projekt demonstriert die Umsetzung einer barrierefreien, rechtssicheren und markenkonformen Webpräsenz.
 
-🔗 **Live Demo:** [HIER DEINEN LINK ZU GITHUB PAGES EINFÜGEN]
+🔗 **Live Demo:** [https://reza-nz.github.io/GreenThumb-AI/]
 
 ---
 
