@@ -255,7 +255,7 @@
                     <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
                     Ihr Browser unterstützt dieses Video nicht.
                 </video>
-                <p>Video: Pflege von Zimmerpflanzen (Symbolvideo)</p>
+                <p>Video: Nahaufnahme einer blühenden Blume im Wind</p>
             </figure>
         </section>
 
@@ -510,6 +510,25 @@
                 } 
             });
         });
+        const banner = document.getElementById('cookie-banner');
+        const btnAccept = document.getElementById('btn-accept');
+        const btnDecline = document.getElementById('btn-decline');
+        function closeBanner() {
+        
+            banner.style.display = 'none';
+        }
+        if(btnAccept) {
+            btnAccept.addEventListener('click', function() {
+                closeBanner();
+                console.log("Cookies akzeptiert.");
+            });
+        }
+        if(btnDecline) {
+            btnDecline.addEventListener('click', function() {
+                closeBanner();
+                console.log("Cookies abgelehnt.");
+            });
+        }
     </script>
 </body>
 </html>
