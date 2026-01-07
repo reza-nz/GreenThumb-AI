@@ -78,6 +78,62 @@
             background-color: #C70039; 
             border-color: #C70039;
         }
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 800px;
+            background-color: #1a1a1a; 
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 9999; 
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            opacity: 0; 
+            animation: slideUp 0.5s forwards;
+            animation-delay: 1s; 
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translate(-50%, 50px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+
+        
+        @media (min-width: 768px) {
+            .cookie-banner {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-accept {
+            background-color: var(--brand-color);
+            border: none;
+            padding: 8px 20px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-decline {
+            background-color: transparent;
+            border: 1px solid #666;
+            padding: 8px 20px;
+            color: #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -196,7 +252,7 @@
             
             <figure>
                 <video width="100%" controls poster="https://images.pexels.com/videos/7653696/4k-botanical-care-environment-flower-7653696.jpg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200">
-                    <source src="https://cdn.pixabay.com/video/2020/05/07/38158-416483761_large.mp4" type="video/mp4">
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
                     Ihr Browser unterstützt dieses Video nicht.
                 </video>
                 <p>Video: Pflege von Zimmerpflanzen (Symbolvideo)</p>
@@ -386,9 +442,9 @@
                         </tr>
                         <tr>
                             <td><strong>Video</strong></td>
-                            <td>Pflanzenpflege (Sprühflasche)</td>
-                            <td>Pexels / Video von <a href="#">Cottonbro Studio</a></td>
-                            <td>Pexels License (Freie Nutzung)</td>
+                            <td>Nahaufnahme einer blühenden Blume im Wind</td>
+                            <td>Mozilla Developer Network (MDN Web Docs)</td>
+                            <td>CC0 1.0 – Public Domain</td>
                         </tr>
                         <tr>
                             <td><strong>Audio</strong></td>
@@ -431,23 +487,29 @@
             &copy; 2026 Reza Naziri. Projektarbeit. Alle Rechte vorbehalten.
         </p>
     </footer>
-
+    <div id="cookie-banner" class="cookie-banner">
+        <div>
+            <strong>Wir verwenden Cookies 🍪</strong><br>
+            <span style="font-size: 0.8rem;">
+                Wir nutzen Cookies und Tracking-Technologien (Simuliert), um Ihr Einkaufserlebnis zu verbessern. 
+                <a href="#datenschutz" style="color: var(--brand-color); text-decoration: underline;">Mehr erfahren</a>.
+            </span>
+        </div>
+        <div class="cookie-buttons">
+            <button id="btn-decline" class="btn-decline">Ablehnen</button>
+            <button id="btn-accept" class="btn-accept">Alles akzeptieren</button>
+        </div>
+    </div>
     <script>
-        
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function(e) {
-                // Holen wir uns das Ziel des Links (z.B. "#legal")
                 const target = this.getAttribute('href');
-
-                
                 if (target === '#') {
                     e.preventDefault();
                     console.log("Leerer Link blockiert.");
                 } 
-                
             });
         });
     </script>
-
 </body>
 </html>
